@@ -1,0 +1,27 @@
+{
+  "name": "minimal",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "he": "^1.1.1",
+    "highlight.js": "^9.12.0",
+    "odeum-primitives": "^0.1.23",
+    "polished": "^1.7.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-highlight": "^0.10.0",
+    "react-modal": "^2.3.2",
+    "react-remarkable": "^1.1.2",
+    "react-scripts": "1.0.13",
+    "remarkable": "^1.7.1",
+    "styled-components": "^2.1.2",
+    "styled-normalize": "^2.2.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
