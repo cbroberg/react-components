@@ -35,6 +35,7 @@ class MouseMover extends Component {
 	}
 }
 
+// TODO: Refactor to remove all arrow functions from render 
 const App = (props) => {
 	
 	return (
