@@ -12,7 +12,7 @@ import Movies from './Movies'
 import IsReachable from './IsReachable'
 import { DisplayProps } from './DisplayStateProps'
 // import Markdown from './Markdown'
-
+import ScrollPosition from './ScrollPosition'
 
 const emoji = {
 	sleeping: String.fromCodePoint(0x1F634),
@@ -36,6 +36,7 @@ class MouseMover extends Component {
 }
 
 const App = (props) => {
+	
 	return (
 		<div>
 			<IsReachable />
@@ -44,6 +45,7 @@ const App = (props) => {
 			<MouseMove render={({ x, y }) => (
 				<Text>The mouse position is ({x}, {y})</Text>
 			)} />
+			<ScrollPosition />
 			<Idle
 				onChange={({ idle }) => null} // console.log({ idle })
 				timeout={1000}
@@ -72,7 +74,7 @@ const App = (props) => {
 			{/* <Headless /> */}
 			<HeadlessUnmapped />
 			<Movies />
-			<DisplayProps {...props} title='App' />
+			<DisplayProps {...props} title={'App'} />
 			{/* <Markdown /> */}
 		</div>
 	)

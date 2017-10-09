@@ -29,5 +29,5 @@ injectGlobal([`
 	`])
 
 
-render(<App name="Christian" someprop={15} otherprop={'Foo Bar'} />, document.getElementById('root'))
+render(<App name="Christian" someprop={42} otherprop={'Foo Bar'} />, document.getElementById('root'))
 
