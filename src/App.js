@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Heading, Text } from 'odeum-primitives'
+import { Heading, Text, Button } from 'odeum-primitives'
 import StateLift, { App1, App2 } from './Lifting_state_up'
 import SwitchJSX from './SwitchJSX'
 import Network from './Network'
@@ -13,6 +13,7 @@ import IsReachable from './IsReachable'
 import { DisplayProps } from './DisplayStateProps'
 // import Markdown from './Markdown'
 import ScrollPosition from './ScrollPosition'
+
 
 const emoji = {
 	sleeping: String.fromCodePoint(0x1F634),
@@ -42,6 +43,7 @@ const App = (props) => {
 		<div>
 			<IsReachable />
 			<Heading>Hello World {props.name} {emoji.sparkle} {emoji.sleep}</Heading>
+			<Button label={"Hello from odeum-ui"} />
 			<MouseMover />
 			<MouseMove render={({ x, y }) => (
 				<Text>The mouse position is ({x}, {y})</Text>
