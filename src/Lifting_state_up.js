@@ -54,7 +54,10 @@ class Calculator extends PureComponent {
 	constructor(props) {
 		super(props)
 
-		this.state = { temperature: '', scale: 'c' }
+		this.state = { 
+			temperature: '', 
+			scale: 'c' 
+		}
 	}
 
 	handleCelsiusChange = (temperature) => {
