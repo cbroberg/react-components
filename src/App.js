@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
-import { Heading, Text, Button } from 'odeum-primitives'
+import { Heading, Text } from 'odeum-primitives'
+import { Button } from 'odeum-ui'
 import StateLift, { App1, App2 } from './Lifting_state_up'
 import SwitchJSX from './SwitchJSX'
 import Network from './Network'
 import MouseMove from './MouseMove'
 import Idle from './Idle'
-// import SnipCart from './SnipCart'
-// import Headless from './Headless'
-import HeadlessUnmapped from './HeadlessUnmapped'
-import Movies from './Movies'
-import IsReachable from './IsReachable'
 import { DisplayProps } from './DisplayStateProps'
-// import Markdown from './Markdown'
 import ScrollPosition from './ScrollPosition'
 
+// import SnipCart from './SnipCart'
+// import Headless from './Headless'
+// import HeadlessUnmapped from './HeadlessUnmapped'
+// import Movies from './Movies'
+// import IsReachable from './IsReachable'
+// import Markdown from './Markdown'
 
 const emoji = {
 	sleeping: String.fromCodePoint(0x1F634),
@@ -36,12 +37,42 @@ class MouseMover extends Component {
 	}
 }
 
+class IdleState extends Component {
+
+	renderIdleNull = ({ idle }) => {
+		return (
+			null
+		)
+	}
+		
+	renderIdleState = ({ idle }) => {
+		return (		
+	 		<Text>		
+				{idle
+					? 'You are idle!'
+					: 'Stop doing stuff for 1 second!'
+				}
+			</Text>
+		)
+	}
+
+	render() {
+		return (
+			<Idle 
+				onChange={this.renderIdleNull} 
+				timeout={1000} 
+				render={this.renderIdleState} />
+		)
+	}
+}
+
+
 // TODO: Refactor to remove all arrow functions from render 
 const App = (props) => {
 	
 	return (
 		<div>
-			<IsReachable />
+			{/* <IsReachable /> */}
 			<Heading>Hello World {props.name} {emoji.sparkle} {emoji.sleep}</Heading>
 			<Button label={"Hello from odeum-ui"} />
 			<MouseMover />
@@ -49,6 +80,9 @@ const App = (props) => {
 				<Text>The mouse position is ({x}, {y})</Text>
 			)} />
 			<ScrollPosition />
+			
+			<IdleState />
+			
 			<Idle
 				onChange={({ idle }) => null} // console.log({ idle })
 				timeout={1000}
@@ -61,6 +95,7 @@ const App = (props) => {
 					</Text>
 				}
 			/>
+			
 			<Network
 				onChange={this.handleNetworkChange}
 				render={({ online }) => (
@@ -75,8 +110,8 @@ const App = (props) => {
 			<App2 />
 			{/* <SnipCart /> */}
 			{/* <Headless /> */}
-			<HeadlessUnmapped />
-			<Movies />
+			{/* <HeadlessUnmapped /> */}
+			{/* <Movies /> */}
 			<DisplayProps {...props} title={'App'} />
 			{/* <Markdown /> */}
 		</div>

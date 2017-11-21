@@ -2,11 +2,10 @@ import React from 'react'
 import { render } from 'react-dom'
 import App from './App'
 import { injectGlobal } from 'styled-components'
-import styledNormalize from 'styled-normalize'
+// import styledNormalize from 'styled-normalize'
 
 injectGlobal([`
-	${styledNormalize}
-
+	
    	html {
 	   font-size: 62.5%;
 	   height: 100vh;

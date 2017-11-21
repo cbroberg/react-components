@@ -1,8 +1,7 @@
-Snippets
+# Snippets
 
 Below is a list of all available snippets and the triggers of each one. The ⇥ means the TAB key.
-
-Trigger	Content
+## Trigger	Content
 rcc→	class component skeleton
 rccp→	class component skeleton with prop types after the class
 rcjc→	class component skeleton without import and default export lines
@@ -28,8 +27,7 @@ props→	this.props
 state→	this.state
 bnd→	binds the this of method inside the constructor
 The following table lists all the snippets that can be used for prop types. Every snippet regarding prop types begins with pt so it's easy to group it all together and explore all the available options. On top of that each prop type snippets has one equivalent when we need to declare that this property is also required. For example pta creates the PropTypes.array and ptar creates the PropTypes.array.isRequired
-
-Trigger	Content
+## Trigger	Content
 pta→	PropTypes.array,
 ptar→	PropTypes.array.isRequired,
 ptb→	PropTypes.bool,
